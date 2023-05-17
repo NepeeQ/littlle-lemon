@@ -8,6 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <meta name="description" content='Little Lemon Restaurant'/>
+    <meta name="og:title" content='Little Lemon'/>
+    <meta name="og:description" content='Chicago`s best restaurant'/>
   </React.StrictMode>
 );
 
