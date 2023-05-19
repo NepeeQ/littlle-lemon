@@ -1,0 +1,17 @@
+.hero{
+    background-color: var(--green);
+    width: 100vw;
+}
+
+.hero > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero img{
+    position: relative;
+    top: 20px;
+    height: 452px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px black;
+}

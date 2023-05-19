@@ -5,7 +5,7 @@ import logo from "../images/Logo.svg"
 function Header()
 {
    return (
-   <header>
+   <header className='wrapper'>
     <img src={logo}></img>
     <Nav></Nav>
    </header>
