@@ -14,8 +14,8 @@ body {
 }
 
 .wrapper{
-  margin: auto;
-  width:75%
+  margin:auto;
+  width:60%
 }
 
 code {
@@ -43,10 +43,10 @@ h3{
   font-size: 20px;
 }
 
-main p{
+p{
   font-family: 'Karla';
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 main img{
@@ -62,9 +62,11 @@ header{
 }
 header img{
   height: 55px;
+  width: 30%;
+  padding-right: 2rem;
 }
 nav{
-  width: 100%;
+  width: 80%;
 }
 nav ul{
   display: flex;

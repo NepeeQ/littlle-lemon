@@ -8,18 +8,16 @@ function Nav()
                     <Link to ="*">Home</Link>
                 </li>
                 <li>
-                    <Link to ="About">About</Link>
+                    <Link to="About">About</Link>
                 </li>
                 <a href="#">
                     <li>
                         Menu
                     </li>
                 </a>
-                <a href="#">
-                    <li>
-                        Reservations
-                    </li>
-                </a>
+                <li>
+                    <Link to="Reservations">Reservations</Link>
+                </li>
                 <a href="#">
                     <li>
                         Order Online
