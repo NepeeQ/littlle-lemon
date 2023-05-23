@@ -3,12 +3,14 @@
 //import * as yup from 'yup'
 //import {yupResolver} from '@hookform/resolvers/yup'
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 
 
 function BookingForm(props)
 {
+    const dispatch = props.dispatch;
+    const submitData = props.submitData;
+    const availableTimes = props.availableTimes;
     //console.log(props.availableTimes.availableTimes)
     const [formData, setFormData] = useState({
         resDate:"",
@@ -32,16 +34,12 @@ function BookingForm(props)
         setFormData({...formData, [e.target.name] : e.target.value})
         if(e.target.name === "resDate")
         {
-            props.dispatch(e.target.value);
+            dispatch(e.target.value);
         }
     }
-    const navigate = useNavigate()
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const apiRes = window.submitAPI(formData);
-        if (apiRes){
-            navigate("/Confirmation")
-        }
+        submitData(formData);
         console.log(formData)
     }
     return(
@@ -50,9 +48,9 @@ function BookingForm(props)
             <input onChange={handleChange} type="date" id="resDate" name="resDate" />
             <label htmlFor="resTime">Choose time</label>
             <select onChange={handleChange} id="resTime" name="resTime">
-                {props.availableTimes.map((hour)=>
+                {availableTimes.map((hour)=>
                 {
-                    return <option key={hour}>{hour}</option>
+                    return <option data-testid="booking-time" key={hour}>{hour}</option>
                 })}
             </select>
             <label htmlFor="guests">Number of guests</label>
