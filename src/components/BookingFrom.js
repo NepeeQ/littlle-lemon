@@ -3,6 +3,7 @@
 //import * as yup from 'yup'
 //import {yupResolver} from '@hookform/resolvers/yup'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -29,11 +30,19 @@ function BookingForm(props)
     const handleChange = (e) =>
     {
         setFormData({...formData, [e.target.name] : e.target.value})
+        if(e.target.name === "resDate")
+        {
+            props.dispatch(e.target.value);
+        }
     }
+    const navigate = useNavigate()
     const handleSubmit = (e) =>{
         e.preventDefault();
-        props.dispatch({type: "time_selected", selectedTime: formData.resTime})
-        //console.log(formData)
+        const apiRes = window.submitAPI(formData);
+        if (apiRes){
+            navigate("/Confirmation")
+        }
+        console.log(formData)
     }
     return(
         <form onSubmit={handleSubmit} style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
@@ -41,7 +50,7 @@ function BookingForm(props)
             <input onChange={handleChange} type="date" id="resDate" name="resDate" />
             <label htmlFor="resTime">Choose time</label>
             <select onChange={handleChange} id="resTime" name="resTime">
-                {props.availableTimes.availableTimes.map((hour)=>
+                {props.availableTimes.map((hour)=>
                 {
                     return <option key={hour}>{hour}</option>
                 })}

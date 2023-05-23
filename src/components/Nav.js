@@ -5,7 +5,7 @@ function Nav()
         <nav>
             <ul>
                 <li>
-                    <Link to ="*">Home</Link>
+                    <Link to ="Home">Home</Link>
                 </li>
                 <li>
                     <Link to="About">About</Link>
@@ -16,7 +16,7 @@ function Nav()
                     </li>
                 </a>
                 <li>
-                    <Link to="Reservations">Reservations</Link>
+                    <Link to="/Reservations">Reservations</Link>
                 </li>
                 <a href="#">
                     <li>
