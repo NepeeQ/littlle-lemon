@@ -1,0 +1,33 @@
+.mealCard
+{
+    border-radius: 16px 16px;
+    background-color: lightgray;
+
+}
+
+.mealCard img{
+    width: 100%;
+    object-fit: cover;
+    height: 10rem;
+}
+
+.mealCardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 1rem;
+}
+
+.mealCardHeader h3{
+    font-family: "Markazi Text";
+    font-size: 24px;
+}
+
+.mealCardHeader p{
+    color: #EE9972;
+    font-weight: bold;
+}
+
+.mealCard > p{
+    margin-inline: 1rem;
+}

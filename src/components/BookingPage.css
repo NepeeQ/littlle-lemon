@@ -1,0 +1,73 @@
+.reservation{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+.reservationBackground{
+    background-color: rgb(51, 51, 51);
+}
+
+
+.reservation form{
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Karla';
+}
+
+.reservation form > label{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.reservation form > input{
+    min-width: 250px;
+    max-width: 500px;
+    background-color: var(--green);
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    font-family: 'Karla';
+    margin-bottom: 25px;
+}
+.reservation form > input::placeholder{
+    color: rgba(255, 255, 255, 0.524)
+}
+
+.reservation form > select{
+    min-width: 250px;
+    max-width: 500px;
+    background-color: var(--green);
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size:16px;
+    height: 30px;
+    font-family: 'Karla';
+    margin-bottom: 25px;
+}
+
+
+.reservation form > input[type=submit]{
+  margin-block: 20px;
+}
+
+.reservation form > input[type=submit]:hover{
+   cursor: pointer;
+  }
+
+.reservation form > input[type=submit]:disabled
+{
+    background-color: gray;
+    cursor: default;
+}
+.error{
+    color: red;
+}

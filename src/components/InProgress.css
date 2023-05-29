@@ -1,0 +1,7 @@
+.progress{
+    text-align: center;
+    
+}
+.progress h1{
+    color: var(--green)
+}

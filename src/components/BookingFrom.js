@@ -13,9 +13,9 @@ function BookingForm(props)
     const submitData = props.submitData;
     const availableTimes = props.availableTimes;
     const schema = yup.object().shape({
-        resDate: yup.date().required(),
-        resTime: yup.string().required(),
-        guests: yup.number().positive().integer().min(1).max(10).required()
+        resDate: yup.date().required("Reservation date is required"),
+        resTime: yup.string().required("Reservation time is required"),
+        guests: yup.number().positive().integer().min(1).max(10).required("Guests number is required")
     })
     const {trigger, setValue, formState: {errors}, handleSubmit} = useForm(
         {
@@ -47,7 +47,7 @@ function BookingForm(props)
         console.log(formData)
     }
     return(
-        <form onSubmit={handleSubmit(handleOnSubmit)} style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
+        <form onSubmit={ handleSubmit((data, e) => handleOnSubmit(e) )}style={{display: "grid", maxWidth: "200px", gap: "20px"}}>
             <label htmlFor="resDate">Choose date</label>
             <input onChange={handleChange} type="date" id="resDate" name="resDate" />
             <ErrorMessage errorCheck={errors["resDate"]}/>

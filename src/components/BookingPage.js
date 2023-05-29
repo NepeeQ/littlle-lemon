@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import "./BookingPage.css"
 import { useReducer } from 'react';
 import BookingForm from './BookingFrom';
 import { useNavigate } from "react-router-dom";
@@ -24,11 +24,13 @@ function BookingPage(props)
         }
     }
     return(
-         <div>
-            <h1>Reservation</h1>
-            <BookingForm availableTimes={availableTimes}
-            dispatch={dispatch}
-            submitData={submitData}/>
+        <div className="reservationBackground">
+            <div className="reservation wrapper">
+                <h1>Reservation</h1>
+                <BookingForm availableTimes={availableTimes}
+                dispatch={dispatch}
+                submitData={submitData}/>
+            </div>
          </div>
     )
 }

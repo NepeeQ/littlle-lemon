@@ -9,3 +9,7 @@ button{
     height: 60px;
     border-style: none ;
 }
+
+button:hover{
+    cursor: pointer;
+}

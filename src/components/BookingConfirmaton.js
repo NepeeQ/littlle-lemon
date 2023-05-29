@@ -1,10 +1,14 @@
+import "./BookingConfirmation.css"
+
 function BookingConfirmaton (){
     return (
-        <div>
-            <h2>
-                Booking Confirmed!
-            </h2>
-        </div>
+        <section className="confirmation">
+            <div className="wrapper">
+                <h2>
+                    Booking Confirmed!
+                </h2>
+            </div>
+        </section>
     )
 }
 

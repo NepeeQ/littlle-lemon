@@ -1,0 +1,11 @@
+.confirmation{
+    text-align: center;
+    background-color:  rgb(51, 51, 51);
+    height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+.confirmation h2{
+    margin:  auto;
+}
