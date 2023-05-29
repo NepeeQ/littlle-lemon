@@ -3,7 +3,7 @@ function ErrorMessage (props)
     const message = props.errorCheck ? props.errorCheck.message : "";
     return (
         <>
-            <p hidden={!props.errorCheck}>{message}</p>
+            <p data-testid="error" hidden={!props.errorCheck}>{message}</p>
         </>
     )
 }
